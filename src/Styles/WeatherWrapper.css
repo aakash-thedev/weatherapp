@@ -1,0 +1,8 @@
+#weather-wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}

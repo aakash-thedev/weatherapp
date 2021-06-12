@@ -1,0 +1,32 @@
+#header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+#current-city-display{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+#current-city-display #city-name{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 3%;
+}
+
+#current-city-display #city-date-time{
+    font-size: 15px;
+    font-weight: 400;
+    color: grey;
+}
+
+img{
+    height: 40px;
+    margin-bottom: 3%;
+    margin-right: 1%;
+}

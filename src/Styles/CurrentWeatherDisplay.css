@@ -1,0 +1,124 @@
+#current-weather-display{
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1.5%;
+}
+
+#weather-details{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#temperature-wrapper{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#weather-details #temperature{
+    font-size: 55px;
+    margin-bottom: 1%;
+}
+
+#min-max{
+    display: flex;
+    height: 100%;
+    width: 133px;
+    margin-right: 6%;
+    margin-bottom: 2%;
+}
+
+#min-max .min-max{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#min-max .min-max:first-child{
+    margin-right: 10%;
+    border-right: 1px solid rgb(224, 224, 224);
+    padding-right: 10%;
+}
+
+#min-max .min-max section:first-child{
+    font-size: 16px;
+    color: grey;
+}
+
+#min-max .min-max section:last-child{
+    font-size: 28px;
+}
+
+#weather-details #more{
+    display: flex;
+    width: 60%;
+}
+
+#more div:first-child{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#more div:first-child .util img{
+    margin-right: 6%;
+}
+
+#more div:last-child{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#more div:last-child .util img{
+    margin-right: 2%;
+}
+
+#more div small{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+#more .util img{
+    height: 30px;
+}
+
+#more #humidity{
+    margin-bottom: -2%;
+}
+
+#more .util #pressure-logo{
+    height: 22px;
+}
+
+#weather-details #weather-description-wrapper{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    height: 100%;
+    width: auto;
+    background-color: skyblue;
+}
+
+#weather-details #weather-description-wrapper img{
+    height: 100%;
+    image-rendering: crisp-edges;
+}
+
+#weather-details #weather-description-wrapper #weather-heading{
+    position: absolute;
+    left: 23%;
+    top: 4%;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
