@@ -207,9 +207,11 @@
         height: 100%;
         image-rendering: crisp-edges;
         border-radius: 15px;
+        margin-top: 15%;
     }
     
     #weather-details #weather-description-wrapper #weather-heading{
         font-size: 22px;
+        left: 30%;
     }
 }

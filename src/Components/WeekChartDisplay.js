@@ -48,7 +48,7 @@ class WeekChartDisplay extends React.Component{
                         labels: weekDate,
                         datasets: [
                             {
-                                label: 'Maximum Temperature',
+                                label: 'Max Temp',
                                 data: maxTempData,
                                 backgroundColor: 'red',
                                 fill: false,
@@ -56,7 +56,7 @@ class WeekChartDisplay extends React.Component{
                             },
 
                             {
-                                label: 'Minimum Temperature',
+                                label: 'Min Temp',
                                 data: minTempData,
                                 backgroundColor: 'blue',
                                 fill: false,
@@ -68,7 +68,7 @@ class WeekChartDisplay extends React.Component{
 
                     options = {{
 
-                        // responsive: true,
+                        responsive: true,
                         maintainAspectRatio: false,
 
                         scales: {
