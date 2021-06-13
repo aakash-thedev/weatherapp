@@ -3,13 +3,12 @@ import '../Styles/CurrentWeatherDisplay.css';
 import humidityLogo from '../Assets/icons8-partly-cloudy-day.gif';
 import wind from '../Assets/icons8-wind-64.png';
 import pressureLogo from '../Assets/icons8-pressure-50.png';
-// import sunrisesunset from '../Assets/icons8-sunrise-64.png';
 import sunrise from '../Assets/sunrise.png';
 import sunset from '../Assets/sunset.png';
 
 const CurrentWeatherDisplay = (props) => {
 
-    const { temperature, maxTemp, minTemp, humidity, pressure, windSpeed } = props;
+    const { temperature, maxTemp, minTemp, humidity, pressure, windSpeed, weatherDesc, weatherIcon } = props;
 
     return(
         <div id="current-weather-display">
@@ -47,10 +46,10 @@ const CurrentWeatherDisplay = (props) => {
 
                 <span id="weather-description-wrapper">
 
-                    {/* <small id="weather-heading">{weather[0].main}</small> */}
-                    {/* <img src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`} alt="weather description"></img> */}
-                    <small id="weather-heading">Clouds</small>
-                    <img src = 'https://cdn0.iconfinder.com/data/icons/ecology-111/1022/clouds-512.png' alt= "weather description"></img>
+                    <small id="weather-heading">{weatherDesc}</small>
+                    <img src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`} alt="weather description"></img>
+                    {/* <small id="weather-heading">Clouds</small> */}
+                    {/* <img src = 'https://cdn0.iconfinder.com/data/icons/ecology-111/1022/clouds-512.png' alt= "weather description"></img> */}
 
                 </span>
 

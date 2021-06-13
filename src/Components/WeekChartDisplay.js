@@ -6,10 +6,15 @@ class WeekChartDisplay extends React.Component{
 
     render(){
 
+        var d = new Date();
+        let currentDate = parseInt(String(d).substring(8, 10));
+        let currentMonth = String(d).substring(4, 7);
+
         let { upcoming } = this.props;
 
         let minTempData = [];
         let maxTempData = [];
+        let weekDate = [];
 
         console.log(upcoming);
 
@@ -29,12 +34,18 @@ class WeekChartDisplay extends React.Component{
             maxTempData.push(maxTemp);
         }
 
+        for(let i=0; i<upcoming.length; i++){
+
+            weekDate.push(`${currentDate} ${currentMonth}`);
+            currentDate++;
+        }
+
         return(
 
             <div id="chart">
                 <Line id = "line-chart"
                     data = {{
-                        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fr', 'Sat'],
+                        labels: weekDate,
                         datasets: [
                             {
                                 label: 'Maximum Temperature',
@@ -79,18 +90,6 @@ class WeekChartDisplay extends React.Component{
                             }
                         }
                     }}
-
-                    // plugins = {{
-
-                    //     title: {
-                    //         text: "Weekly Data",
-                    //         display: true
-                    //     },
-
-                    //     tooltip: {
-                    //         backgroundColor: 'blue'
-                    //     }
-                    // }}
 
                     height = {178}
                 />

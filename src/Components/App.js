@@ -17,7 +17,8 @@ class App extends React.Component{
             sunrise: 0,
             sunset: 0,
             pressure: 0,
-            weather: [],
+            weatherDesc: '',
+            weatherIcon : '',
             upcoming: []
 
         }
@@ -30,7 +31,6 @@ class App extends React.Component{
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
 
             this.setState({
 
@@ -42,7 +42,8 @@ class App extends React.Component{
                 sunrise: data.current.sunrise,
                 sunset: data.current.sunset,
                 pressure: data.current.pressure,
-                weather: data.current.weather,
+                weatherDesc: data.current.weather[0].main,
+                weatherIcon: data.current.weather[0].icon,
                 upcoming: data.daily
 
             });
@@ -54,11 +55,12 @@ class App extends React.Component{
 
     render(){
 
-        const { temperature, minTemp, maxTemp, humidity, pressure, windSpeed, sunrise, sunset, weather, upcoming } = this.state;
+        const { temperature, minTemp, maxTemp, humidity, pressure, windSpeed, sunrise, sunset, weatherDesc, weatherIcon, upcoming } = this.state;
 
         return(
 
             <div id="app">
+                
                 <WeatherWrapper
 
                     temperature = {temperature}
@@ -69,9 +71,11 @@ class App extends React.Component{
                     windSpeed = {windSpeed}
                     sunrise = {sunrise}
                     sunset = {sunset}
-                    weather = {weather}
+                    weatherDesc = {weatherDesc}
+                    weatherIcon = {weatherIcon}
                 
                 />
+
                 <WeekChartDisplay
 
                     upcoming = {upcoming}
