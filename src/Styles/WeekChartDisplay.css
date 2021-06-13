@@ -8,5 +8,5 @@
     box-sizing: content-box;
     image-rendering: optimizeSpeed;
     margin-top: 1%;
-    z-index: 99;
+    height: 300px;
 }

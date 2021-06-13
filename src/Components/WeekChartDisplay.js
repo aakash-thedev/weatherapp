@@ -69,6 +69,7 @@ class WeekChartDisplay extends React.Component{
                     options = {{
 
                         // responsive: true,
+                        maintainAspectRatio: false,
 
                         scales: {
                             x: {
