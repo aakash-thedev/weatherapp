@@ -18,6 +18,7 @@ class App extends React.Component{
             sunset: 0,
             pressure: 0,
             weather: [],
+            upcoming: []
 
         }
     }
@@ -41,7 +42,8 @@ class App extends React.Component{
                 sunrise: data.current.sunrise,
                 sunset: data.current.sunset,
                 pressure: data.current.pressure,
-                weather: data.current.weather
+                weather: data.current.weather,
+                upcoming: data.daily
 
             });
 
@@ -52,7 +54,7 @@ class App extends React.Component{
 
     render(){
 
-        const { temperature, minTemp, maxTemp, humidity, pressure, windSpeed, sunrise, sunset, weather } = this.state;
+        const { temperature, minTemp, maxTemp, humidity, pressure, windSpeed, sunrise, sunset, weather, upcoming } = this.state;
 
         return(
 
@@ -70,7 +72,11 @@ class App extends React.Component{
                     weather = {weather}
                 
                 />
-                <WeekChartDisplay />
+                <WeekChartDisplay
+
+                    upcoming = {upcoming}
+                
+                />
             </div>
         );
     }
